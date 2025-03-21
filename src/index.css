@@ -9,7 +9,13 @@
   --color-error: #000;
   --color-success: #000;
 
-  --font-luxury: Luxury
+  --font-luxury: "Beauty-Luxury";
+
+}
+
+@font-face {
+  font-family: "Beauty-Luxury";
+  src: url(../../public/fonts/BeautyLuxury-Regular.woff) format(woff);
 }
 
 :root {

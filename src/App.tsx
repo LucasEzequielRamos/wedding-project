@@ -1,11 +1,10 @@
 import "./App.css";
+import Header from "./sections/header";
 
 function App() {
   return (
     <>
-      <div className="bg-accent">
-        <p className="text-6xl text-primary">Hola</p>
-      </div>
+      <Header />
     </>
   );
 }
