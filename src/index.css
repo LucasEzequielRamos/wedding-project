@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #000;
+  --color-primary: #243956;
   --color-primary-dark: #000;
-  --color-secondary: #000;
+  --color-secondary: #F5F5F5;
   --color-accent: #CEE2FF;
-  --color-background: #fff;
+  --color-background: #F6F2EB;
   --color-error: #000;
   --color-success: #000;
 
   --font-luxury: "Beauty-Luxury";
-
+  --font-altivo: "Altivo";
 }
 
 @font-face {
   font-family: "Beauty-Luxury";
-  src: url(../../public/fonts/BeautyLuxury-Regular.woff) format(woff);
+  src: url(../public/fonts/BeautyLuxury-Regular.woff) format(woff);
+  font-family: "Altivo";
+  src: url(../public/fonts/Demo_Fonts/Fontspring-DEMO-altivo-regular.otf);
 }
 
 :root {
