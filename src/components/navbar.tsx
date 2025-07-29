@@ -27,7 +27,7 @@ const Navbar = () => {
           <img
             src={isOpen ? "/icons/close.svg" : "/icons/menu_hamb.svg"}
             alt="Menú"
-            className="w-6 h-6"
+            className="size-5"
           />
         </button>
       </div>
