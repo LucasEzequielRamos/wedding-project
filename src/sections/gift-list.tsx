@@ -6,7 +6,7 @@ import { Gift } from "../types/gift";
 import GiftCard from "../components/gift-card";
 import GiftModal from "../components/gift-modal";
 
-const Giftlist = () => {
+const GiftList = () => {
   const [giftList, setGiftList] = useState<Gift[]>([]);
   const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
   const [copiedAlias, setCopiedAlias] = useState<string | null>(null);
@@ -64,4 +64,4 @@ const Giftlist = () => {
   );
 };
 
-export default Giftlist;
+export default GiftList;
