@@ -1,6 +1,6 @@
 const Ceremony = () => {
   return (
-    <section className="mx-9 my-6 m-auto bg-background flex flex-col justify-center text-center">
+    <section className="mx-9 mb-21 bg-background flex flex-col justify-center text-center">
       <h2 className="mb-4">CEREMONIA</h2>
 
       <div className="flex h-full w-auto justify-between gap-2">

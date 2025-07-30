@@ -1,3 +1,41 @@
+@import url("https://p.typekit.net/p.css?s=1&k=wan0tuq&ht=tk&f=35170.35171.35174.35175&a=209175247&app=typekit&e=css");
+
+@font-face {
+  font-family: "altivo";
+  src: url("https://use.typekit.net/af/76ba10/00000000000000007735acfb/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/76ba10/00000000000000007735acfb/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/76ba10/00000000000000007735acfb/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "altivo";
+  src: url("https://use.typekit.net/af/598ae4/00000000000000007735cf0c/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/598ae4/00000000000000007735cf0c/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/598ae4/00000000000000007735cf0c/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "altivo";
+  src: url("https://use.typekit.net/af/6be5fa/00000000000000007735ad04/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/6be5fa/00000000000000007735ad04/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/6be5fa/00000000000000007735ad04/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "altivo";
+  src: url("https://use.typekit.net/af/322477/00000000000000007735cf17/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"), url("https://use.typekit.net/af/322477/00000000000000007735cf17/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"), url("https://use.typekit.net/af/322477/00000000000000007735cf17/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
 @import "tailwindcss";
 
 @theme {
@@ -10,20 +48,15 @@
   --color-success: #000;
 
   --font-luxury: "Beauty-Luxury";
-  --font-altivo: "Altivo";
+  --font-altivo: "altivo";
 }
 
-@font-face {
-  font-family: "Beauty-Luxury";
-  src: url(../public/fonts/BeautyLuxury-Regular.woff) format(woff);
-  font-family: "Altivo";
-  src: url(../public/fonts/Demo_Fonts/Fontspring-DEMO-altivo-regular.otf);
-}
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "altivo", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  letter-spacing: 0.05em;
 
   color: var(--color-primary);
 
@@ -50,11 +83,31 @@ button {
 }
 
 h2 {
-  font-weight: 600;
   font-size: 25px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
+
 }
 
 h3 {
-  size: 20px;
+  font-size: 12px;
+  line-height: 1.2em;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border-radius: 999px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+input {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding-left: 16px;
+  font-size: 12px;
+}
+
+input::placeholder {
+  font-size: 12px;
 }

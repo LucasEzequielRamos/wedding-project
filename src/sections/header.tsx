@@ -2,7 +2,7 @@ import Navbar from "../components/navbar";
 
 const Header = () => {
   return (
-    <div className="relative w-full">
+    <div className="m-9 mb-14 ">
       <Navbar />
     </div>
   );

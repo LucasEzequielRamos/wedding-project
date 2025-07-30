@@ -5,12 +5,12 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <nav className="bg-background my-6 mx-2 text-xs flex justify-between items-center relative">
-      <div className="flex text-primary max-w-22 font-semibold">
+    <nav className="bg-background text-xs flex justify-end items-center ">
+      {/* <div className="flex text-primary max-w-22 font-semibold">
         <button className="py-1 px-3 rounded-[100px] border leading-3 tracking-wide">
           Confirma Asistencia
         </button>
-      </div>
+      </div> */}
 
       <div className="absolute left-[40%] top-[45%]-translate-x-1/2 -translate-y-1/2">
         <picture>
