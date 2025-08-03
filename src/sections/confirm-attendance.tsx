@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CustomSelect from "../components/custom-select";
 import { addGuest } from "../lib/add-guest";
+import { Toaster, toast } from "sonner";
 
 const ConfirmAttendance = () => {
   const [fullName, setFullName] = useState("");
@@ -10,23 +11,23 @@ const ConfirmAttendance = () => {
   async function handleSubmit(e: any) {
     e.preventDefault();
 
-    if (!fullName || !email || !confirmed) {
-      alert("Por favor completá todos los campos");
+    if (!fullName || !email || !confirmed || confirmed === "TE VEMOS?") {
+      toast.warning("Por favor completá todos los campos");
       return;
     }
 
     const res = await addGuest(fullName, email, confirmed);
-
     !res
-      ? alert(
+      ? toast.warning(
           "No se encontro tu nombre en la lista, verifica por favor si es correcto: (Nombre Apellido)"
         )
-      : null;
+      : toast.success("Confirmacion enviada. Muchas gracias!");
     console.log(res);
   }
 
   return (
     <section className="mx-9 mb-21 bg-background ">
+      <Toaster position="bottom-right" duration={1000} />
       <div className=" flex flex-col items-center w-full text-center">
         <h2 className="w-44 leading-7 mb-4">CONFIRMAR ASISTENCIA</h2>
         <div className="w-full">

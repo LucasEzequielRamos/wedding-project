@@ -2,7 +2,6 @@ import { supabase } from '../utils/supabaseClient'
 
 export async function addGuest(fullName: string,email:string, confirmed: string | null) {
   const lowerName = fullName.trim().toLowerCase();
-console.log(confirmed)
   const { data: guest, error: searchError } = await supabase
     .from('guests')
     .select('*')

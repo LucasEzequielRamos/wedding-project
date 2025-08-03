@@ -12,7 +12,6 @@ const CustomSelect = ({ confirm }: CustomSelectProps) => {
     setIsOpen(!isOpen);
   };
   const handleSelect = (option: string) => {
-    console.log("ola");
     setSelected(option);
     setIsOpen(false);
     confirm(option.toLowerCase().includes("no") ? options[1] : options[0]);
