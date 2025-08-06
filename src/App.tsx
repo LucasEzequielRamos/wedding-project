@@ -7,6 +7,8 @@ import TestInsertGuest from "./sections/test-insertar-invitado";
 import Location from "./sections/location";
 import MansionDraw from "./components/mansion-draw";
 import ConfirmAttendance from "./sections/confirm-attendance";
+import Timeline from "./sections/timeline";
+import Faq from "./sections/faq";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <MansionDraw />
       <Location />
       <ConfirmAttendance />
+      <Timeline />
+      <Faq />
       <GiftList />
       <TestInsertGuest />
     </>
