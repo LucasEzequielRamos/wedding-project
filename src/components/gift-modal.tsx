@@ -1,121 +1,113 @@
 import { useState } from "react";
-import { Gift } from "../types/gift";
 
 const GiftModal = ({
-  gift,
-  copied,
   onCopy,
   onClose,
+  buy,
 }: {
-  gift: Gift;
-  copied: boolean;
-  onCopy: () => void;
+  onCopy: any;
   onClose: () => void;
+  buy: boolean;
 }) => {
-  const [showRequestAddress, setShowRequestAddress] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "" });
-  const [showWhatsappLink, setShowWhatsappLink] = useState(false);
+  const [form, setForm] = useState({ name: "" });
 
   const phoneNumber = "5491124849007";
 
-  const handleGenerateWhatsapp = () => {
-    if (!form.name.trim()) {
-      alert("Por favor ingresá tu nombre y número.");
-      return;
-    }
-    setShowWhatsappLink(true);
-  };
-
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    `Hola! Soy ${form.name}, me gustaría comprar el regalo: ${gift.title}. ¿Me podés pasar la dirección para enviarlo?`
+    `Hola! Soy ${form.name}, me gustaría comprarles un regalo: ¿Como podriamos coordinarlo?`
   )}`;
 
   return (
-    <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center text-black">
-      <div className="bg-white rounded-xl p-6 relative w-full max-w-lg text-left shadow-xl">
+    <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
+      <div className="bg-background rounded-xl px-5 py-7 relative w-64 h-72 shadow-xl flex flex-col text-center">
         <button
           onClick={onClose}
-          className="absolute top-2 right-3 text-xl text-gray-500 hover:text-black"
+          className="absolute top-2 right-3 text-xl !bg-transparent !text-primary size-3 "
         >
           ×
         </button>
 
-        <h3 className="text-2xl font-bold mb-2">{gift.title}</h3>
-        <p className="text-sm text-gray-700 mb-6">
-          Tu presencia es lo más importante ❤️ Pero si querés colaborar con este
-          regalo, podés hacerlo así:
-        </p>
-
-        <div className="bg-gray-50 rounded-lg p-4 mb-4">
-          <p className="font-semibold ">1. Transferencia:</p>
-          <p className="mb-2 text-sm">Con el monto que puedas hacerlo ❤</p>
-          <button
-            onClick={onCopy}
-            className="bg-primary text-white py-2 px-4 rounded hover:bg-primary/90"
-          >
-            {copied ? "Alias copiado ✅" : "📋 Copiar alias"}
-          </button>
-          <p className="text-xs text-gray-500 mt-1">{gift.alias}</p>
+        <div className="mb-6">
+          <h2 className=" mb-2">{buy ? "COMPRAR" : "APORTAR"}</h2>
+          <p className="text-sm mb-4">
+            Gracias por {buy ? "tu" : "aportar en este"} regalo!
+          </p>
+          <p className="text-sm leading-4 ">
+            {buy
+              ? "Para continuar con la compra llená tus datos para verificar todo con nosotros! "
+              : "Tu aporte puede ser del monto total o una parte según lo que dispongas..."}
+          </p>
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-4 mb-4">
-          <p className="font-semibold mb-2">2. Comprar el producto:</p>
-          <a
-            href={gift.link}
-            target="_blank"
-            className="text-info underline hover:text-info/80 text-sm"
-          >
-            🌐 Ver producto en tienda
-          </a>
+        {buy ? (
+          <div className="">
+            <input
+              type="text"
+              placeholder="Tu nombre completo"
+              value={form.name}
+              onChange={e => setForm({ ...form, name: e.target.value })}
+              className=" bg-primary !text-background mt-2 px-3 py-2 rounded-full w-full mb-2"
+            />
 
-          {!showRequestAddress && !showWhatsappLink && (
-            <button
-              onClick={() => setShowRequestAddress(true)}
-              className="block text-sm mt-4 underline text-gray-700 hover:text-black"
-            >
-              ✔️ Quiero comprar este regalo
+            <button className="px-8 py-2">
+              <a href={whatsappURL} target="_blank" className="">
+                Enviar
+              </a>
             </button>
-          )}
-
-          {showRequestAddress && !showWhatsappLink && (
-            <div className="mt-4">
-              <p className="text-sm text-gray-600 mb-2">
-                Dejanos tus datos y te mostramos un mensaje para enviarnos por
-                WhatsApp:
+          </div>
+        ) : (
+          <div>
+            <div className="flex  justify-center  gap-2  text-[10px] mb-2">
+              <p className="w-52 text ">
+                Alias Mercado Pago: <br /> lucas-ramos-13
               </p>
-              <input
-                type="text"
-                placeholder="Tu nombre completo"
-                value={form.name}
-                onChange={e => setForm({ ...form, name: e.target.value })}
-                className="border border-gray-300 mt-2 px-3 py-2 rounded w-full"
-              />
-              <input
-                type="tel"
-                placeholder="Tu email (opcional)"
-                value={form.email}
-                onChange={e => setForm({ ...form, email: e.target.value })}
-                className="border border-gray-300 mt-2 px-3 py-2 rounded w-full"
-              />
               <button
-                onClick={handleGenerateWhatsapp}
-                className="bg-black mt-3 w-full text-white py-2 px-4 rounded hover:bg-info/90"
+                onClick={() => onCopy("lucas-ramos-13")}
+                className="!bg-transparent !text-primary size-3"
               >
-                Ir a WhatsApp
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                </svg>
               </button>
             </div>
-          )}
 
-          {showWhatsappLink && (
-            <a
-              href={whatsappURL}
-              target="_blank"
-              className="block text-center mt-4 bg-green-500 text-white py-2 rounded hover:bg-green-600"
-            >
-              Enviar mensaje por WhatsApp 📲
-            </a>
-          )}
-        </div>
+            <div className=" flex  justify-center  gap-2  text-[10px]">
+              <p className="w-52 ">CBU: 0000003100076442071344</p>
+              <button
+                onClick={() => onCopy("0000003100076442071344")}
+                className="!bg-transparent !text-primary size-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+                  <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

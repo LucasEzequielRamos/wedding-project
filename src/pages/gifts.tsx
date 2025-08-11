@@ -6,15 +6,14 @@ import GiftModal from "../components/gift-modal";
 
 const Gifts = () => {
   const [giftList, setGiftList] = useState<Gift[]>([]);
-  const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
-  const [copiedAlias, setCopiedAlias] = useState<string | null>(null);
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const [buyAction, setBuyAction] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchGifts = async () => {
       const { data, error } = await supabase.from("Gifts").select("*");
       if (error) console.error("Error al cargar los regalos:", error.message);
       else setGiftList(data);
-      console.log(data, error);
     };
 
     fetchGifts();
@@ -22,11 +21,9 @@ const Gifts = () => {
 
   const handleCopy = (alias: string) => {
     navigator.clipboard.writeText(alias);
-    setCopiedAlias(alias);
     setTimeout(() => {
-      setCopiedAlias(null);
-      setSelectedGift(null);
-    }, 3000);
+      setOpenModal(false);
+    }, 500);
   };
 
   return (
@@ -50,10 +47,19 @@ const Gifts = () => {
           <GiftCard
             key={gift.id}
             gift={gift}
-            onSelect={() => setSelectedGift(gift)}
+            open={setOpenModal}
+            buy={setBuyAction}
           />
         ))}
       </div>
+
+      {openModal && (
+        <GiftModal
+          onCopy={handleCopy}
+          onClose={() => setOpenModal(false)}
+          buy={buyAction}
+        />
+      )}
     </section>
   );
 };
