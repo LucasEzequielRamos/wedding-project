@@ -27,7 +27,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/50 z-10 transition-opacity duration-300 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -35,10 +34,9 @@ const Navbar = () => {
         onClick={toggleMenu}
       />
 
-      {/* Menú lateral */}
       <div
-        className={`fixed top-0 right-0 h-screen w-3/4 bg-[#425D81] text-background p-6 pt-16 shadow space-y-12 text-xl z-20 transform transition-transform duration-1000 ease-in-out
-        ${isOpen ? "translate-x-0" : "translate-x-full invisible"}`}
+        className={`fixed top-0  h-screen w-3/4 bg-[#425D81] text-background p-6 pt-16 space-y-12 text-xl z-20 transform transition-all duration-500 ease-in-out 
+        ${isOpen ? "right-0" : "-right-[100%]"}`}
       >
         {[
           "INICIO",
@@ -61,9 +59,8 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Botón cerrar */}
       <button
-        className={`md:hidden !bg-[#425D81] fixed top-7 right-7 z-30  ${
+        className={`md:hidden !bg-[#425D81] fixed top-7 right-7 z-30 transform transition-all duration-500 ease-in-out ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}
