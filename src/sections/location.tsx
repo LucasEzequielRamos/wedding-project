@@ -1,8 +1,9 @@
-import React from "react";
-
 const Location = () => {
   return (
-    <section className="mx-9 mb-21 bg-background flex flex-col justify-center text-center">
+    <section
+      id="UBICACION"
+      className="mx-9 mb-21 bg-background flex flex-col justify-center text-center"
+    >
       <div className="flex flex-col justify-center items-center">
         <h2>UBICACIÓN</h2>
         <h3 className="mb-5">

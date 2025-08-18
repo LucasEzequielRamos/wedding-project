@@ -26,7 +26,7 @@ const ConfirmAttendance = () => {
   }
 
   return (
-    <section className="mx-9 mb-21 bg-background ">
+    <section id="CONFIRMAR ASISTENCIA" className="mx-9 mb-21 bg-background ">
       <Toaster position="bottom-right" duration={1000} />
       <div className=" flex flex-col items-center w-full text-center">
         <h2 className="w-44 leading-7 mb-4">CONFIRMAR ASISTENCIA</h2>

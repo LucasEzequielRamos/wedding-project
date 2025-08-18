@@ -1,9 +1,7 @@
 const Footer = () => {
   return (
     <footer className="w-full">
-      <picture>
-        <img src="" alt="" />
-      </picture>
+      <picture>{/* <img src="" alt="" /> */}</picture>
       <div>
         <h3>
           ESTAMOS EMOCIONADOS POR VIVIR ESTE DIA JUNTO A VOS! <br /> <br /> NOS

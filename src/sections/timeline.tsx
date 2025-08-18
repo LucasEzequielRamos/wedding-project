@@ -1,6 +1,6 @@
 const Timeline = () => {
   return (
-    <section className="mx-9 mb-21 bg-background">
+    <section id="TIMELINE" className="mx-9 mb-21 bg-background">
       <div className="flex flex-col justify-center items-center">
         <h2>TIMELINE</h2>
         <img
