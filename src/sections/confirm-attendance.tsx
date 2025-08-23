@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CustomSelect from "../components/custom-select";
 import { addGuest } from "../lib/add-guest";
 import { Toaster, toast } from "sonner";
