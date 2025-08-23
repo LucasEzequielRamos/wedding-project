@@ -20,13 +20,13 @@ const GiftCard = ({ gift, buy, open }: { gift: Gift; buy: any; open: any }) => {
         <a className="text-[8px] underline  ">Link del articulo</a>
       </div>
 
-      <div className="text-[10px] flex justify-around ">
+      <div className="text-[9px] flex   justify-around ">
         <button
           onClick={() => {
             buy(true);
             open(true);
           }}
-          className="px-1 !font-light"
+          className="px-1.5 py-0.5 !font-light"
         >
           COMPRAR
         </button>
@@ -35,7 +35,7 @@ const GiftCard = ({ gift, buy, open }: { gift: Gift; buy: any; open: any }) => {
             buy(false);
             open(true);
           }}
-          className="px-1 !font-light"
+          className="px-1.5 py-0.5  !font-light"
         >
           APORTAR
         </button>

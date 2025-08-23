@@ -7,11 +7,21 @@ const Ceremony = () => {
       <h2 className="mb-4">CEREMONIA</h2>
 
       <div className="flex h-full w-auto justify-between gap-2">
-        <picture>
+        <picture className="relative h-fit w-[155px]">
           <img
-            src="/images/img_ceremony.png"
+            src="/icons/mark_images.svg"
+            alt="marco para la imagen"
+            className="w-6 absolute -top-1 -left-1 "
+          />
+          <img
+            src="/images/image_2.webp"
             alt="image_ceremony"
-            className="h-fit w-full"
+            className="h-fit w-[155px]"
+          />
+          <img
+            src="/icons/mark_images.svg"
+            alt="marco para la imagen"
+            className="w-6 absolute -bottom-2 -right-2 "
           />
         </picture>
         <div className="w-44 flex flex-col ">

@@ -97,7 +97,7 @@ button {
   background-color: var(--color-primary);
   color: var(--color-background);
   border-radius: 999px;
-  font-weight: 400;
+  font-weight: 00;
   letter-spacing: 0.05em;
 }
 
@@ -110,4 +110,5 @@ input {
 
 input::placeholder {
   font-size: 12px;
+
 }

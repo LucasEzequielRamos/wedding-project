@@ -9,6 +9,7 @@ import ConfirmAttendance from "../sections/confirm-attendance";
 import Timeline from "../sections/timeline";
 import Faq from "../sections/faq";
 import Footer from "../sections/footer";
+import MiniHero from "../sections/mini-hero";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <MansionDraw />
       <Location />
       <ConfirmAttendance />
+      <MiniHero />
       <Timeline />
       <Faq />
       <Footer />

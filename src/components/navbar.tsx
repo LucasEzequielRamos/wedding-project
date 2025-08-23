@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="absolute left-[40%] top-7 -translate-x-1/2 -translate-y-1/2">
         <picture>
           <img
-            src="/images/Y&L_top.png"
+            src="/icons/logo_yl.svg "
             alt="Logo"
             className="w-[110px] h-auto"
           />
@@ -23,7 +23,12 @@ const Navbar = () => {
           className="md:hidden !bg-inherit fixed top-7 right-7"
           onClick={toggleMenu}
         >
-          <img src="/icons/menu_hamb.svg" alt="Menú" className="size-5" />
+          <img
+            src="/icons/menu_hamb.png
+          "
+            alt="Menú"
+            className="size-5"
+          />
         </button>
       </div>
 

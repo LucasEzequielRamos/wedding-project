@@ -4,7 +4,7 @@ const Timeline = () => {
       <div className="flex flex-col justify-center items-center">
         <h2>TIMELINE</h2>
         <img
-          src="/images/timeline.svg"
+          src="/images/timeline.png"
           alt="Timeline del evento"
           className="w-full max-w-xl mx-auto -my-4"
           loading="lazy"
