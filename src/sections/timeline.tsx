@@ -6,7 +6,7 @@ const Timeline = () => {
         <img
           src="/images/timeline.png"
           alt="Timeline del evento"
-          className="w-full max-w-xl mx-auto -my-4"
+          className="w-full max-w-xl mx-auto my-4"
           loading="lazy"
         />
       </div>

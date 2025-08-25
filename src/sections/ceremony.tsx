@@ -6,8 +6,8 @@ const Ceremony = () => {
     >
       <h2 className="mb-4">CEREMONIA</h2>
 
-      <div className="flex h-full w-auto justify-between gap-2">
-        <picture className="relative h-fit w-[155px]">
+      <div className="flex  w-auto justify-between gap-4">
+        <picture className="relative max-w-[155px]">
           <img
             src="/icons/mark_images.svg"
             alt="marco para la imagen"
@@ -16,7 +16,7 @@ const Ceremony = () => {
           <img
             src="/images/image_2.webp"
             alt="image_ceremony"
-            className="h-fit w-[155px]"
+            className="max-w-[155px] h-auto"
           />
           <img
             src="/icons/mark_images.svg"
@@ -24,7 +24,7 @@ const Ceremony = () => {
             className="w-6 absolute -bottom-2 -right-2 "
           />
         </picture>
-        <div className="w-44 flex flex-col ">
+        <div className=" flex flex-col ">
           <h3 className="text-xs mb-5">
             Creemos juntos que lo más importante es entregarle a Dios nuestra
             unión, por eso tendremos un tiempo para compartir este momento
@@ -34,7 +34,6 @@ const Ceremony = () => {
             23 . 11 . 25
             <br /> 17:30 HS
           </p>
-
           <p className="text-[8px] flex h-full items-end pb-2">
             TENER EN CUENTA QUE LA CEREMONIA COMIENZA A LAS 18 HS PUNTUAL
           </p>

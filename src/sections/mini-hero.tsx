@@ -1,7 +1,7 @@
 const MiniHero = () => {
   return (
     <section
-      className="w-full flex justify-center items-center py-16 mb-21"
+      className="relative w-full flex justify-center items-center pt-16 pb-24 mb-21"
       style={{
         backgroundImage: "url(/icons/background_stripes.svg)",
         backgroundRepeat: "no-repeat",
@@ -11,6 +11,13 @@ const MiniHero = () => {
     >
       <picture>
         <img src="/images/image_1.webp" alt="Mini hero" className="w-[300px]" />
+      </picture>
+      <picture>
+        <img
+          src="/images/todo_tiempo.png"
+          alt="texto ilustrado"
+          className="absolute w-48 right-1 bottom-6 transform -rotate-6"
+        />
       </picture>
     </section>
   );

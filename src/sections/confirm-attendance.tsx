@@ -32,7 +32,7 @@ const ConfirmAttendance = () => {
         <h2 className="w-44 leading-7 mb-4">CONFIRMAR ASISTENCIA</h2>
         <div className="w-full">
           <form
-            className="flex flex-col items-center [&>input]:h-7 [&>input]:w-full gap-2 [&>input]:rounded-full  "
+            className="flex flex-col items-center [&>input]:h-7 [&>input]:w-full gap-2 [&>input]:rounded-full [&>input]:text-base "
             onSubmit={handleSubmit}
           >
             <CustomSelect confirm={setConfirmed} />
@@ -43,7 +43,7 @@ const ConfirmAttendance = () => {
               onChange={e => setFullName(e.target.value)}
             />
             <input
-              placeholder="Mail"
+              placeholder="Email"
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,20 +8,20 @@ const Navbar = () => {
   const handleLinkClick = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-background/40 text-xs flex justify-end items-center z-40 p-10 ">
-      <div className="absolute left-[40%] top-7 -translate-x-1/2 -translate-y-1/2">
-        <picture>
-          <img
-            src="/icons/logo_yl.svg "
-            alt="Logo"
-            className="w-[110px] h-auto"
-          />
-        </picture>
-      </div>
-
-      <div>
+    <nav className="fixed top-0 left-0 w-full bg-background/90 z-40 h-20 ">
+      <div className="h-full px-10  grid grid-cols-3 items-center">
+        <div />
+        <div className="justify-self-center">
+          <picture>
+            <img
+              src="/icons/logo_yl.svg "
+              alt="Logo"
+              className="w-[110px] h-auto"
+            />
+          </picture>
+        </div>
         <button
-          className="md:hidden !bg-inherit fixed top-7 right-7"
+          className="md:hidden justify-self-end !bg-inherit"
           onClick={toggleMenu}
         >
           <img
@@ -53,13 +54,23 @@ const Navbar = () => {
           "PREGUNTAS FRECUENTES",
         ].map((item, idx) => (
           <li key={idx} className="list-none">
-            <a
-              href={item === "REGALOS" ? "/gifts" : `/#${item}`}
-              onClick={handleLinkClick}
-              className="hover:underline transition-colors duration-200"
-            >
-              {item}
-            </a>
+            {item === "REGALOS" ? (
+              <Link
+                to="/gifts"
+                onClick={handleLinkClick}
+                className="hover:underline transition-colors duration-200"
+              >
+                {item}
+              </Link>
+            ) : (
+              <a
+                href={`/#${item}`}
+                onClick={handleLinkClick}
+                className="hover:underline transition-colors duration-200"
+              >
+                {item}
+              </a>
+            )}
           </li>
         ))}
       </div>
