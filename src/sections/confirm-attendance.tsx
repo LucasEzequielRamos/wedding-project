@@ -22,6 +22,9 @@ const ConfirmAttendance = () => {
           "No se encontro tu nombre en la lista, verifica por favor si es correcto: (Nombre Apellido)"
         )
       : toast.success("Confirmacion enviada. Muchas gracias!");
+    setFullName("");
+    setEmail("");
+    setConfirmed(null);
   }
 
   return (

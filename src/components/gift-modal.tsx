@@ -40,9 +40,10 @@ const GiftModal = ({
         </div>
 
         {buy ? (
-          <div className="">
+          <form className="">
             <input
               type="text"
+              required
               placeholder="Tu nombre completo"
               value={form.name}
               onChange={e => setForm({ ...form, name: e.target.value })}
@@ -53,11 +54,13 @@ const GiftModal = ({
               href={whatsappURL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-2 bg-primary text-background rounded-full"
+              className={`px-8 py-2 bg-primary text-background rounded-full ${
+                form.name ? "" : "opacity-50 pointer-events-none"
+              }`}
             >
               Enviar
             </a>
-          </div>
+          </form>
         ) : (
           <div>
             <div className="flex  justify-center  gap-2  text-[10px] mb-2">

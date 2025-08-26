@@ -30,7 +30,7 @@ const CustomSelect = ({ confirm }: CustomSelectProps) => {
             : "!text-primary !bg-background"
         }`}
       >
-        {selected || "TE VEMOS?"}
+        {selected || "Te vemos?"}
         <span className="">
           <svg
             xmlns="http://www.w3.org/2000/svg"
