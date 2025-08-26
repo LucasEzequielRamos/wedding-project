@@ -8,12 +8,14 @@ import Timeline from "../sections/timeline";
 import Faq from "../sections/faq";
 import Footer from "../sections/footer";
 import MiniHero from "../sections/mini-hero";
+import ToGifts from "../components/to-gifts";
 
 function Home() {
   return (
     <>
       <Hero />
       <Ceremony />
+      <ToGifts />
       <MansionDraw />
       <Location />
       <ConfirmAttendance />
@@ -21,8 +23,6 @@ function Home() {
       <Timeline />
       <Faq />
       <Footer />
-      {/* <GiftList /> */}
-      {/* <TestInsertGuest /> */}
     </>
   );
 }

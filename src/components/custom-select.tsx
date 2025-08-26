@@ -31,7 +31,22 @@ const CustomSelect = ({ confirm }: CustomSelectProps) => {
         }`}
       >
         {selected || "TE VEMOS?"}
-        <span className="ml-2">{isOpen ? "▲" : "▼"}</span>
+        <span className="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className={`w-4 h-4   ${isOpen ? "rotate-180" : "rotate-0"}`}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 9l6 6 6-6"
+            />
+          </svg>
+        </span>
       </button>
 
       {isOpen && (

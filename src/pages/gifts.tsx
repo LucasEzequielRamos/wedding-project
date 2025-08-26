@@ -28,7 +28,7 @@ const Gifts = () => {
 
   return (
     <section className="mx-9 mb-21">
-      <div className="text-center mb-20">
+      <div className="text-center mb-14">
         <h2 className="mb-6">REGALOS</h2>
         <p className="text-xs mb-4">
           Te agradecemos nuevamente por tu gesto! <br /> Realmente nos ayuda un

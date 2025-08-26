@@ -2,7 +2,7 @@ const Location = () => {
   return (
     <section
       id="UBICACION"
-      className="mx-9 mb-21 bg-background flex flex-col justify-center text-center"
+      className="mx-9 mb-14 bg-background flex flex-col justify-center text-center"
     >
       <div className="flex flex-col justify-center items-center">
         <h2>UBICACIÓN</h2>

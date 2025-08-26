@@ -11,7 +11,7 @@ const GiftModal = ({
 }) => {
   const [form, setForm] = useState({ name: "" });
 
-  const phoneNumber = "5491124849007";
+  const phoneNumber = import.meta.env.PHONE_NUMBER_GIFTS;
 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     `Hola! Soy ${form.name}, me gustaría comprarles un regalo: ¿Como podriamos coordinarlo?`
@@ -46,14 +46,17 @@ const GiftModal = ({
               placeholder="Tu nombre completo"
               value={form.name}
               onChange={e => setForm({ ...form, name: e.target.value })}
-              className=" bg-primary !text-background mt-2 px-3 py-2 rounded-full w-full mb-2"
+              className=" bg-primary !text-background mt-2 px-3 py-2 rounded-full w-full mb-4"
             />
 
-            <button className="px-8 py-2">
-              <a href={whatsappURL} target="_blank" className="">
-                Enviar
-              </a>
-            </button>
+            <a
+              href={whatsappURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-2 bg-primary text-background rounded-full"
+            >
+              Enviar
+            </a>
           </div>
         ) : (
           <div>

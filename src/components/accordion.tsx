@@ -9,7 +9,7 @@ const faqs: FAQItem[] = [
   {
     question: "¿Pueden ir niños?",
     answer:
-      "Queremos que puedan disfrutar de una noche especial con nosotros, por eso la celebración será solo para adultos.",
+      "Nos encantaría que todos pudieran compartir esta noche especial, pero la celebración está pensada principalmente para adultos. Si se presenta alguna situación especial, no dudes en hablarnos y podremos coordinarlo juntos.",
   },
   {
     question: "¿Cómo es el dresscode?",
@@ -36,7 +36,7 @@ const faqs: FAQItem[] = [
     answer: "",
   },
 ];
-const phoneNumber = "5491155252521";
+const phoneNumber = import.meta.env.PHONE_NUMBER_FAQ;
 
 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
   `Hola, tengo una consulta acerca del casamiento de Lucas y Jael`
