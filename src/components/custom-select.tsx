@@ -17,13 +17,13 @@ const CustomSelect = ({ confirm }: CustomSelectProps) => {
     confirm(option.toLowerCase().includes("no") ? options[1] : options[0]);
   };
 
-  const options = ["SI, VOY!", "NO VOY..."];
+  const options = ["Si, voy!", "No voy..."];
 
   return (
-    <div className="relative w-full mx-auto text-xs font-semibold tracking-wide">
+    <div className="relative w-full mx-auto text-xs tracking-wide">
       <button
         onClick={toggleOpen}
-        className={`w-full flex justify-between items-center px-4 py-1.5 border border-primary rounded-full
+        className={`w-full flex justify-between items-center px-4 py-1.5 border border-primary rounded-full text-[16px] font-bold
         ${
           isOpen
             ? "!bg-primary !text-background"

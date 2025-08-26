@@ -9,6 +9,7 @@ import Faq from "../sections/faq";
 import Footer from "../sections/footer";
 import MiniHero from "../sections/mini-hero";
 import ToGifts from "../components/to-gifts";
+import { useEffect } from "react";
 
 function Home() {
   return (

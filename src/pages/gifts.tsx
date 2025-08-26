@@ -3,6 +3,7 @@ import { supabase } from "../utils/supabaseClient";
 import { Gift } from "../types/gift";
 import GiftCard from "../components/gift-card";
 import GiftModal from "../components/gift-modal";
+import { toast, Toaster } from "sonner";
 
 const Gifts = () => {
   const [giftList, setGiftList] = useState<Gift[]>([]);
@@ -21,13 +22,15 @@ const Gifts = () => {
 
   const handleCopy = (alias: string) => {
     navigator.clipboard.writeText(alias);
+    toast.success("Copiado en el portapapeles");
     setTimeout(() => {
       setOpenModal(false);
     }, 500);
   };
 
   return (
-    <section className="mx-9 mb-21">
+    <section id="REGALOS" className="mx-9 mb-21 anchor">
+      <Toaster position="bottom-right" duration={2300} />
       <div className="text-center mb-14">
         <h2 className="mb-6">REGALOS</h2>
         <p className="text-xs mb-4">

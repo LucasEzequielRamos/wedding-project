@@ -56,7 +56,7 @@ const Navbar = () => {
           <li key={idx} className="list-none">
             {item === "REGALOS" ? (
               <Link
-                to="/gifts"
+                to={"/gifts"}
                 onClick={handleLinkClick}
                 className="hover:underline transition-colors duration-200"
               >

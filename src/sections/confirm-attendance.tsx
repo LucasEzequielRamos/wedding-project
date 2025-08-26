@@ -26,7 +26,7 @@ const ConfirmAttendance = () => {
 
   return (
     <section id="CONFIRMAR ASISTENCIA" className="mx-9 mb-21 bg-background ">
-      <Toaster position="bottom-right" duration={1000} />
+      <Toaster position="bottom-right" duration={2300} />
       <div className=" flex flex-col items-center w-full text-center">
         <h2 className="w-44 leading-7 mb-4">CONFIRMAR ASISTENCIA</h2>
         <div className="w-full">
@@ -53,7 +53,7 @@ const ConfirmAttendance = () => {
           </form>
         </div>
         <p className="text-[8px] mt-6">
-          POR FAVOR, CONFIRMAR ANTES DEL 01/11/25
+          POR FAVOR, CONFIRMAR ANTES DEL 24/10/25
         </p>
       </div>
     </section>

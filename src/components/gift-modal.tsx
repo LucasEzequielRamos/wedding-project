@@ -89,7 +89,9 @@ const GiftModal = ({
             <div className=" flex  justify-center  gap-2  text-[10px]">
               <p className="w-52 ">CBU: 0000003100076442071344</p>
               <button
-                onClick={() => onCopy("0000003100076442071344")}
+                onClick={() => {
+                  onCopy("0000003100076442071344");
+                }}
                 className="!bg-transparent !text-primary size-3"
               >
                 <svg
