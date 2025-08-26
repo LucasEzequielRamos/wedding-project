@@ -36,7 +36,7 @@ const faqs: FAQItem[] = [
     answer: "",
   },
 ];
-const phoneNumber = import.meta.env.PHONE_NUMBER_FAQ;
+const phoneNumber = import.meta.env.VITE_PHONE_NUMBER_FAQ;
 
 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
   `Hola, tengo una consulta acerca del casamiento de Lucas y Jael`

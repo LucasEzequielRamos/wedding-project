@@ -11,7 +11,7 @@ const GiftModal = ({
 }) => {
   const [form, setForm] = useState({ name: "" });
 
-  const phoneNumber = import.meta.env.PHONE_NUMBER_GIFTS;
+  const phoneNumber = import.meta.env.VITE_PHONE_NUMBER_GIFTS;
 
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     `Hola! Soy ${form.name}, me gustaría comprarles un regalo: ¿Como podriamos coordinarlo?`
