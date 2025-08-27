@@ -98,7 +98,7 @@ h2 {
   font-size: 25px;
   letter-spacing: 0.05em;
 
-  @apply md:text-4xl leading-10;
+  @apply md:text-4xl md:leading-10;
 }
 
 
