@@ -20,10 +20,10 @@ const CustomSelect = ({ confirm }: CustomSelectProps) => {
   const options = ["Si, voy!", "No voy..."];
 
   return (
-    <div className="relative w-full mx-auto text-xs tracking-wide">
+    <div className="relative w-full mx-auto text-xs md:text-xl tracking-wide">
       <button
         onClick={toggleOpen}
-        className={`w-full flex justify-between items-center px-4 py-1.5 border border-primary rounded-full text-[16px] font-bold
+        className={`w-full flex justify-between items-center px-4 py-1.5 border border-primary rounded-full text-[16px] font-bold  md:h-10 md:text-xl
         ${
           isOpen
             ? "!bg-primary !text-background"
@@ -56,7 +56,7 @@ const CustomSelect = ({ confirm }: CustomSelectProps) => {
               type="button"
               key={option}
               onClick={() => handleSelect(option)}
-              className="w-full h-7 !bg-background !text-primary border border-primary rounded-full py-1 hover:bg-primary hover:text-background transition"
+              className="w-full h-7 md:h-10 !bg-background !text-primary border border-primary rounded-full py-1 hover:bg-primary hover:text-background transition"
             >
               {option}
             </button>

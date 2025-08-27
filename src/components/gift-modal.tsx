@@ -19,20 +19,20 @@ const GiftModal = ({
 
   return (
     <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
-      <div className="bg-background rounded-xl px-5 py-7 relative w-64 h-72 shadow-xl flex flex-col text-center">
+      <div className="bg-background rounded-xl px-5 py-7 relative w-64 h-72 md:w-sm md:h-80 shadow-xl flex flex-col text-center">
         <button
           onClick={onClose}
-          className="absolute top-2 right-3 text-xl !bg-transparent !text-primary size-3 "
+          className="absolute top-2 right-3 text-xl md:text-3xl !bg-transparent !text-primary size-3 md:size-5 "
         >
           ×
         </button>
 
         <div className="mb-6">
           <h2 className=" mb-2">{buy ? "COMPRAR" : "APORTAR"}</h2>
-          <p className="text-sm mb-4">
+          <p className="text-sm md:text-lg mb-4">
             Gracias por {buy ? "tu" : "aportar en este"} regalo!
           </p>
-          <p className="text-sm leading-4 ">
+          <p className="text-sm md:text-lg leading-4 ">
             {buy
               ? "Para continuar con la compra llená tus datos para verificar todo con nosotros! "
               : "Tu aporte puede ser del monto total o una parte según lo que dispongas..."}
@@ -54,7 +54,7 @@ const GiftModal = ({
               href={whatsappURL}
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-8 py-2 bg-primary text-background rounded-full ${
+              className={`px-8 py-2 md:text-xl bg-primary text-background rounded-full ${
                 form.name ? "" : "opacity-50 pointer-events-none"
               }`}
             >
@@ -63,15 +63,16 @@ const GiftModal = ({
           </form>
         ) : (
           <div>
-            <div className="flex  justify-center  gap-2  text-[10px] mb-2">
+            <div className="flex md:items-center justify-center  gap-2  text-[10px] md:text-sm mb-2">
               <p className="w-52 text ">
                 Alias Mercado Pago: <br /> lucas-ramos-13
               </p>
               <button
                 onClick={() => onCopy("lucas-ramos-13")}
-                className="!bg-transparent !text-primary size-3"
+                className="!bg-transparent !text-primary size-3 md:size-5"
               >
                 <svg
+                  className="md:size-5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"
@@ -89,15 +90,16 @@ const GiftModal = ({
               </button>
             </div>
 
-            <div className=" flex  justify-center  gap-2  text-[10px]">
+            <div className=" flex md:items-center  justify-center  gap-2  text-[10px] md:text-sm">
               <p className="w-52 ">CBU: 0000003100076442071344</p>
               <button
                 onClick={() => {
                   onCopy("0000003100076442071344");
                 }}
-                className="!bg-transparent !text-primary size-3"
+                className="!bg-transparent !text-primary size-3 md:size-5"
               >
                 <svg
+                  className="md:size-5"
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height="16"

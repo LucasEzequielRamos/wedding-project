@@ -30,14 +30,14 @@ const Gifts = () => {
 
   return (
     <section id="REGALOS" className="mx-9 mb-21 anchor">
-      <Toaster position="bottom-right" duration={2300} />
-      <div className="text-center mb-14">
+      <Toaster position="bottom-center" duration={2300} />
+      <div className="text-center mb-14 md:w-7/8 md:mx-auto">
         <h2 className="mb-6">REGALOS</h2>
-        <p className="text-xs mb-4">
+        <p className="text-xs md:text-lg mb-4">
           Te agradecemos nuevamente por tu gesto! <br /> Realmente nos ayuda un
           montón!
         </p>
-        <p className="text-xs">
+        <p className="text-xs md:text-lg">
           A continuación vas a encontrar productos que nos hacen falta... <br />
           Según lo que hayas dispuesto en regalarnos podes comprar el producto
           en su pagina original o enviarnos el dinero equivalente a lo que hayas
@@ -45,7 +45,7 @@ const Gifts = () => {
           <br /> ¡Nosotros te lo facilitamos!
         </p>
       </div>
-      <div className="grid gap-x-8 gap-y-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 bg-base-100 ">
+      <div className="grid gap-x-8 gap-y-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 bg-base-100 ">
         {giftList.map(gift => (
           <GiftCard
             key={gift.id}

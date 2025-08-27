@@ -10,13 +10,17 @@ const MiniHero = () => {
       }}
     >
       <picture>
-        <img src="/images/image_1.webp" alt="Mini hero" className="w-[300px]" />
+        <img
+          src="/images/image_1.webp"
+          alt="Mini hero"
+          className="w-[300px] md:w-[500px]"
+        />
       </picture>
       <picture>
         <img
           src="/images/todo_tiempo.png"
           alt="texto ilustrado"
-          className="absolute w-48 right-1 bottom-6 transform -rotate-6"
+          className="absolute w-48 md:w-64 right-1 bottom-6 transform -rotate-6"
         />
       </picture>
     </section>

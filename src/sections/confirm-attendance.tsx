@@ -34,7 +34,7 @@ const ConfirmAttendance = () => {
         <h2 className="w-44 leading-7 mb-4">CONFIRMAR ASISTENCIA</h2>
         <div className="w-full">
           <form
-            className="flex flex-col items-center [&>input]:h-7 [&>input]:w-full gap-2 [&>input]:rounded-full [&>input]:text-base "
+            className="flex flex-col items-center [&>input]:h-7 [&>input]:w-full gap-2 [&>input]:rounded-full [&>input]:text-base  [&>input]:md:h-10"
             onSubmit={handleSubmit}
           >
             <CustomSelect confirm={setConfirmed} />
@@ -50,12 +50,15 @@ const ConfirmAttendance = () => {
               value={email}
               onChange={e => setEmail(e.target.value)}
             />
-            <button className="w-fit py-1.5 px-5 mt-4" type="submit">
+            <button
+              className="w-fit py-1.5 px-5 mt-4 md:text-lg "
+              type="submit"
+            >
               CONFIRMAR
             </button>
           </form>
         </div>
-        <p className="text-[8px] mt-6">
+        <p className="text-[8px] md:text-xs mt-6">
           POR FAVOR, CONFIRMAR ANTES DEL 24/10/25
         </p>
       </div>

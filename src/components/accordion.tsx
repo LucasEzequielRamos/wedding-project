@@ -9,7 +9,7 @@ const faqs: FAQItem[] = [
   {
     question: "¿Pueden ir niños?",
     answer:
-      "Nos encantaría que todos pudieran compartir esta noche especial, pero la celebración está pensada principalmente para adultos. Si se presenta alguna situación especial, no dudes en hablarnos y podremos coordinarlo juntos.",
+      "Nos encantaría que todos pudieran acompañarnos en esta noche tan especial, pero hemos pensado la celebración principalmente para adultos. Aun así, si surgiera alguna situación particular, no dudes en comentárnosla y veremos juntos cómo resolverlo.",
   },
   {
     question: "¿Cómo es el dresscode?",
@@ -19,7 +19,7 @@ const faqs: FAQItem[] = [
   {
     question: "¿Qué pasa si ya confirme asistencia y no puedo ir?",
     answer:
-      "Si ya confirmaste asistencia y por algún motivo no podes venir, hacenoslo saber lo antes posible a través de Whatsapp!. Por favor, les pedimos consideración en los tiempos de aviso. Así podemos cederle la invitación a otra persona, gracias! ",
+      "Si ya confirmaste tu asistencia y por algún motivo no podés venir, te pedimos que nos avises lo antes posible por WhatsApp. De esa manera podremos reorganizarnos y, si hace falta, darle tu lugar a otra persona. ¡Gracias de corazón por tu consideración! ",
   },
   {
     question: "¿Se cancela si llueve?",
@@ -29,7 +29,7 @@ const faqs: FAQItem[] = [
   {
     question: "Tengo más preguntas...",
     answer:
-      "Para preguntas más especificas, podés mandarnos un mensaje a whatsapp",
+      "Para preguntas más especificas, podés mandarnos un mensaje a Whatsapp",
   },
   {
     question: "",
@@ -55,7 +55,7 @@ const Accordion = () => {
         <div key={index} className={`${index == 5 && "hidden"}`}>
           <button
             onClick={() => toggle(index)}
-            className="w-fit text-left py-3 px-1 font-semibold flex  items-center !bg-background !text-primary gap-1  !rounded-none"
+            className="w-fit text-left py-3 px-1 font-semibold flex  items-center !bg-background !text-primary gap-1  !rounded-none md:text-lg"
           >
             <span className="text-2xl">·</span>
             <span className="w-fit">{item.question}</span>
@@ -79,14 +79,18 @@ const Accordion = () => {
             </span>
           </button>
           <div
-            className={`overflow-hidden transition-all duration-200 ease-in-out px-2 text-sm flex flex-col items-center  ${
+            className={`overflow-hidden transition-all duration-400 ease-in-out px-2 text-sm  flex flex-col items-center md:w-full  ${
               openIndex === index ? "max-h-40 py-2" : "max-h-0"
             }`}
           >
-            <p className="text-[10px] ml-2">{item.answer}</p>
-            {(openIndex == 4 || openIndex == 2) && (
+            <p className="text-[10px] ml-2 md:text-sm md:self-start">
+              {item.answer}
+            </p>
+            {openIndex === index && (index === 4 || index === 2) && (
               <a href={whatsappURL} target="_blank">
-                <button className="px-5 py-1 mt-4">ENVIAR MENSAJE</button>
+                <button className="px-5 py-1 mt-4 md:text-lg">
+                  ENVIAR MENSAJE
+                </button>
               </a>
             )}
           </div>

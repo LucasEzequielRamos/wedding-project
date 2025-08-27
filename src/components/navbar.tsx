@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-background/90 z-40 h-20 ">
-      <div className="h-full px-10  grid grid-cols-3 items-center">
+      <div className="h-full px-10 md:px-8  grid grid-cols-3  items-center">
         <div />
         <div className="justify-self-center">
           <picture>
@@ -21,7 +21,7 @@ const Navbar = () => {
           </picture>
         </div>
         <button
-          className="md:hidden justify-self-end !bg-inherit"
+          className="lg:hidden justify-self-end !bg-inherit"
           onClick={toggleMenu}
         >
           <img
@@ -41,7 +41,7 @@ const Navbar = () => {
       />
 
       <div
-        className={`fixed top-0  h-screen w-3/4 bg-[#425D81] text-background p-6 pt-16 space-y-12 text-xl z-20 transform transition-all duration-500 ease-in-out 
+        className={`fixed top-0  h-screen w-3/4 md:w-1/2 bg-[#425D81] text-background p-6 pt-16 space-y-12 text-xl z-20 transform transition-all duration-500 ease-in-out 
         ${isOpen ? "right-0" : "-right-[100%]"}`}
       >
         {[
@@ -76,7 +76,7 @@ const Navbar = () => {
       </div>
 
       <button
-        className={`md:hidden !bg-[#425D81] fixed top-7 right-7 z-30 transform transition-all duration-500 ease-in-out ${
+        className={`lg:hidden !bg-[#425D81] fixed top-7 right-7 z-30 transform transition-all duration-500 ease-in-out ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}
