@@ -8,7 +8,7 @@ function normalizeName(name: string) {
     .replace(/[\u0300-\u036f]/g, '');
 }
 
-export async function addGuest(fullName: string, email: string, confirmed: string | null) {
+export async function addGuest(fullName: string, tel: string, confirmed: string | null) {
   const normalizedName = normalizeName(fullName);
 
   
@@ -28,7 +28,7 @@ export async function addGuest(fullName: string, email: string, confirmed: strin
     .update({
       confirmed: confirmed,
       confirmed_at: new Date().toISOString(),
-      email: email,
+      tel: tel,
     })
     .eq('full_name_lc', normalizedName);
 

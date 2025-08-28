@@ -8,17 +8,17 @@ const Navbar = () => {
   const handleLinkClick = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-background/90 z-40 h-20 ">
+    <nav className="fixed top-0 left-0 w-full bg-background/90 z-40 h-20 lg:h-24">
       <div className="h-full px-10 md:px-8  grid grid-cols-3  items-center">
         <div />
         <div className="justify-self-center">
-          <picture>
+          <a href="/">
             <img
               src="/icons/logo_yl.svg "
               alt="Logo"
-              className="w-[110px] h-auto"
+              className="w-[110px] lg:w-[140px] h-auto"
             />
-          </picture>
+          </a>
         </div>
         <button
           className="lg:hidden justify-self-end !bg-inherit"

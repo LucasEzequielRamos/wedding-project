@@ -50,7 +50,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto text-xs divide-y divide-gray-300 ">
+    <div className="w-full max-w-2xl lg:max-w-4xl mx-auto text-xs divide-y divide-gray-300 ">
       {faqs.map((item, index) => (
         <div key={index} className={`${index == 5 && "hidden"}`}>
           <button

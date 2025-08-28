@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const ToGifts = () => {
   return (
-    <section className="mx-9 md:mx-14 mb-14 text-center">
+    <section className="mx-9 md:mx-14 lg:mx-24 mb-14 text-center">
       <h2 className="mb-7">¿QUERÉS HACERNOS UN REGALO?</h2>
-      <p className="text-xs md:text-lg mb-6">
+      <p className="text-xs md:text-lg lg:text-xl mb-6">
         Agradecemos enormemente tu gesto! Apretando el botón podrás acceder a
         nuestra lista de regalos...
       </p>

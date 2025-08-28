@@ -19,14 +19,14 @@ const Location = () => {
           </a>
         </button>
         <div className="w-1/2 flex flex-col h-fit mt-2">
-          <picture className="w-full flex pl-10 md:pl-20">
+          <picture className="w-full flex pl-10 md:pl-20 lg:pl-36">
             <img
               src="/icons/arrow.svg"
               alt="flecha curva hacia abajo"
-              className="size-5 md:size-9"
+              className="size-5 md:size-9 lg:size-12"
             />
           </picture>
-          <p className="text-[8px] md:text-xs w-18 md:w-36">
+          <p className="text-[10px] md:text-xs lg:text-sm w-24 md:w-36 lg:w-58 lg:pl-16">
             Te llevamos con Google Maps!
           </p>
         </div>

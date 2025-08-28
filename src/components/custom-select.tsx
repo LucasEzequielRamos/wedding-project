@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 type CustomSelectProps = {
   confirm: (value: string | null) => void;
+  confirmed: string | null;
 };
 
-const CustomSelect = ({ confirm }: CustomSelectProps) => {
+const CustomSelect = ({ confirm, confirmed }: CustomSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState("");
+  console.log({ confirmed });
+
+  useEffect(() => {
+    !confirmed && setSelected("");
+  }, [confirmed]);
 
   const toggleOpen = (e: React.MouseEvent) => {
     e.preventDefault();

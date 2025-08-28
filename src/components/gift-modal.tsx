@@ -19,17 +19,17 @@ const GiftModal = ({
 
   return (
     <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
-      <div className="bg-background rounded-xl px-5 py-7 relative w-64 h-72 md:w-sm md:h-80 shadow-xl flex flex-col text-center">
+      <div className="bg-background rounded-xl px-5 py-7 relative w-64 h-72 md:w-sm lg:w-lg md:h-80 lg:h-96 shadow-xl flex flex-col text-center">
         <button
           onClick={onClose}
-          className="absolute top-2 right-3 text-xl md:text-3xl !bg-transparent !text-primary size-3 md:size-5 "
+          className="absolute top-2 right-3 text-xl md:!text-3xl  !bg-transparent !text-primary size-3 md:size-5 lg:size-7"
         >
-          ×
+          x
         </button>
 
-        <div className="mb-6">
-          <h2 className=" mb-2">{buy ? "COMPRAR" : "APORTAR"}</h2>
-          <p className="text-sm md:text-lg mb-4">
+        <div className="mb-6 lg:mb-14">
+          <h2 className=" mb-2 lg:mb-6">{buy ? "COMPRAR" : "APORTAR"}</h2>
+          <p className="text-sm md:text-lg mb-4 lg:mb-8">
             Gracias por {buy ? "tu" : "aportar en este"} regalo!
           </p>
           <p className="text-sm md:text-lg leading-4 ">

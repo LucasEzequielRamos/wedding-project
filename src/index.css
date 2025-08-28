@@ -98,7 +98,7 @@ h2 {
   font-size: 25px;
   letter-spacing: 0.05em;
 
-  @apply md:text-4xl md:leading-10;
+  @apply md:text-4xl md:leading-10 lg:leading-12 lg:text-5xl;
 }
 
 
@@ -106,7 +106,7 @@ h3 {
   font-size: 12px;
   line-height: 1.2em;
 
-  @apply md:text-lg;
+  @apply md:text-lg lg:text-2xl;
 }
 
 button {
@@ -116,6 +116,7 @@ button {
   letter-spacing: 0.05em;
   cursor: pointer;
 
+  @apply lg:text-2xl
 }
 
 input,

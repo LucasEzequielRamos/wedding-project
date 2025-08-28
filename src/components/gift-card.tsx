@@ -32,7 +32,7 @@ const GiftCard = ({ gift, buy, open }: { gift: Gift; buy: any; open: any }) => {
             buy(true);
             open(true);
           }}
-          className="px-1.5 py-0.5 md:px-2.5 md:py-1 !font-light"
+          className="lg:!text-sm px-1.5 py-0.5 md:px-2.5 md:py-1 !font-light"
         >
           COMPRAR
         </button>
@@ -41,7 +41,7 @@ const GiftCard = ({ gift, buy, open }: { gift: Gift; buy: any; open: any }) => {
             buy(false);
             open(true);
           }}
-          className="px-1.5 py-0.5 md:px-2.5 md:py-1 !font-light"
+          className="lg:!text-sm px-1.5 py-0.5 md:px-2.5 md:py-1 !font-light"
         >
           APORTAR
         </button>

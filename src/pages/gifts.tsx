@@ -45,7 +45,7 @@ const Gifts = () => {
           <br /> ¡Nosotros te lo facilitamos!
         </p>
       </div>
-      <div className="grid gap-x-8 gap-y-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 bg-base-100 ">
+      <div className="grid gap-x-8 gap-y-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-base-100 ">
         {giftList.map(gift => (
           <GiftCard
             key={gift.id}
