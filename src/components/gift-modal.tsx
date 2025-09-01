@@ -63,7 +63,7 @@ const GiftModal = ({
           </form>
         ) : (
           <div>
-            <div className="flex md:items-center justify-center  gap-2  text-[10px] md:text-sm mb-2">
+            <div className="flex items-center justify-center  gap-2  text-xs md:text-sm mb-2">
               <p className="w-52 text ">
                 Alias Mercado Pago: <br /> lucas-ramos-13
               </p>
@@ -90,7 +90,7 @@ const GiftModal = ({
               </button>
             </div>
 
-            <div className=" flex md:items-center  justify-center  gap-2  text-[10px] md:text-sm">
+            <div className=" flex items-center  justify-center  gap-2  text-xs md:text-sm">
               <p className="w-52 ">CBU: 0000003100076442071344</p>
               <button
                 onClick={() => {

@@ -58,7 +58,7 @@ const Accordion = () => {
             className="w-fit text-left py-3 px-1 font-semibold flex  items-center !bg-background !text-primary gap-1  !rounded-none md:text-lg"
           >
             <span className="text-2xl">·</span>
-            <span className="w-fit">{item.question}</span>
+            <span className="w-fit text-sm xl:text-lg">{item.question}</span>
             <span className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,11 +79,11 @@ const Accordion = () => {
             </span>
           </button>
           <div
-            className={`overflow-hidden transition-all duration-400 ease-in-out px-2 text-sm  flex flex-col items-center md:w-full  ${
+            className={`overflow-hidden transition-all duration-400 ease-in-out px-2 text-sm  flex flex-col items-center md:w-full   ${
               openIndex === index ? "max-h-40 py-2" : "max-h-0"
             }`}
           >
-            <p className="text-[10px] ml-2 md:text-sm md:self-start">
+            <p className="text-xs ml-2 md:text-sm md:self-start xl:text-lg">
               {item.answer}
             </p>
             {openIndex === index && (index === 4 || index === 2) && (

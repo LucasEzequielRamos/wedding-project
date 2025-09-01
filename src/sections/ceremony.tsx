@@ -7,7 +7,7 @@ const Ceremony = () => {
       <h2 className="mb-4">CEREMONIA</h2>
 
       <div className="flex  w-auto justify-between gap-4">
-        <picture className="relative max-w-[155px] h-[232px] md:max-w-[300px] md:h-auto lg:max-w-[370px]">
+        <picture className="relative max-w-[155px] h-[232px] md:max-w-[300px] md:h-auto lg:max-w-[370px] xl:max-w-[500px]">
           <img
             src="/icons/mark_images.svg"
             alt="marco para la imagen"
@@ -16,7 +16,7 @@ const Ceremony = () => {
           <img
             src="/images/image_2.webp"
             alt="image_ceremony"
-            className="max-w-[155px] md:max-w-[300px] h-auto lg:max-w-[370px]"
+            className="max-w-[155px] md:max-w-[300px] h-auto lg:max-w-[370px] xl:max-w-[500px]"
           />
           <img
             src="/icons/mark_images.svg"
@@ -34,7 +34,7 @@ const Ceremony = () => {
             23 . 11 . 25
             <br /> 17:30 HS
           </p>
-          <p className="md:text-lg lg:text-xl text-[8px] flex h-full lg:h-auto items-end pb-2">
+          <p className="md:text-lg lg:text-xl text-[8px] flex h-full lg:h-auto items-end pb-2 justify-center">
             TENER EN CUENTA QUE LA CEREMONIA COMIENZA A LAS 18 HS PUNTUAL
           </p>
         </div>

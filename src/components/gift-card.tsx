@@ -12,7 +12,7 @@ const GiftCard = ({ gift, buy, open }: { gift: Gift; buy: any; open: any }) => {
       </picture>
 
       <div className="px-4 text-[10px] md:text-sm min-h-16 flex flex-col justify-around mb-2">
-        <h4 className=" w-full ">
+        <h4 className=" w-full text-xs ">
           {gift.title.split(" ").slice(0, 3).join(" ")}
         </h4>
 
@@ -20,30 +20,30 @@ const GiftCard = ({ gift, buy, open }: { gift: Gift; buy: any; open: any }) => {
           href={gift.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[8px] underline  md:text-xs"
+          className="text-[10px] underline  md:text-xs"
         >
           Link del articulo
         </a>
       </div>
 
-      <div className="text-[9px] md:text-xs flex justify-around ">
+      <div className="text-[10px] md:text-xs flex justify-around ">
         <button
           onClick={() => {
             buy(true);
             open(true);
           }}
-          className="lg:!text-sm px-1.5 py-0.5 md:px-2.5 md:py-1 !font-light"
+          className="lg:!text-sm px-1.5 py-0.5 md:px-2.5 md:py-1 "
         >
-          COMPRAR
+          Comprar
         </button>
         <button
           onClick={() => {
             buy(false);
             open(true);
           }}
-          className="lg:!text-sm px-1.5 py-0.5 md:px-2.5 md:py-1 !font-light"
+          className="lg:!text-sm px-1.5 py-0.5 md:px-2.5 md:py-1 "
         >
-          APORTAR
+          Aportar
         </button>
       </div>
     </article>

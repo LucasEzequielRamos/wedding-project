@@ -11,7 +11,7 @@ const ConfirmAttendance = () => {
   async function handleSubmit(e: any) {
     e.preventDefault();
 
-    if (!fullName || !tel || !confirmed || confirmed === "TE VEMOS?") {
+    if (!fullName || !tel || !confirmed || confirmed === "Te vemos?") {
       toast.warning("Por favor completá todos los campos");
       return;
     }
@@ -19,7 +19,14 @@ const ConfirmAttendance = () => {
     const res = await addGuest(fullName, tel, confirmed);
     if (!res) {
       toast.warning(
-        "No se encontro tu nombre en la lista, verifica por favor si es correcto: (Nombre Apellido)"
+        <>
+          No se encontró tu nombre en la lista, verificá si es correcto:
+          <br />
+          <br />
+          Nombre: Primer nombre
+          <br />
+          Apellido: De casado o de soltero
+        </>
       );
     } else {
       toast.success("Confirmacion enviada. Muchas gracias!");
@@ -30,14 +37,14 @@ const ConfirmAttendance = () => {
 
   return (
     <section id="CONFIRMAR ASISTENCIA" className="mx-9 mb-21 bg-background ">
-      <Toaster position="bottom-right" duration={3000} />
+      <Toaster position="bottom-right" duration={3500} />
       <div className=" flex flex-col items-center w-full text-center">
         <h2 className=" leading-7 mb-4">
           CONFIRMAR <br /> ASISTENCIA
         </h2>
-        <div className="w-full">
+        <div className="w-full max-w-[400px]">
           <form
-            className="flex flex-col items-center [&>input]:h-7 [&>input]:w-full gap-2 [&>input]:rounded-full [&>input]:text-base  [&>input]:md:h-10"
+            className="flex flex-col items-center  [&>input]:h-7 [&>input]:w-full gap-2 [&>input]:rounded-full [&>input]:text-base  [&>input]:md:h-10"
             onSubmit={handleSubmit}
           >
             <CustomSelect confirm={setConfirmed} confirmed={confirmed} />

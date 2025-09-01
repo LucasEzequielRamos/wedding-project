@@ -11,7 +11,7 @@ const Hero = () => {
         <h3 className="text-xs ">BIENVENIDOS A NUESTRA BODA</h3>
       </div>
 
-      <picture className="w-full h-[200px] md:min-h-[450px] lg:min-h-[600px]">
+      <picture className="w-full h-[200px] md:min-h-[450px] lg:min-h-[600px] xl:min-h-[820px] 2xl:min-h-[1100px]">
         <video
           autoPlay
           muted
