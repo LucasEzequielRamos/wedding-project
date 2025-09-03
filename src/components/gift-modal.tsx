@@ -7,7 +7,7 @@ const GiftModal = ({
 }: {
   onCopy: any;
   onClose: () => void;
-  buy: boolean;
+  buy: string | null;
 }) => {
   const [form, setForm] = useState({ name: "" });
 
@@ -19,7 +19,7 @@ const GiftModal = ({
 
   return (
     <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center">
-      <div className="bg-background rounded-xl px-5 py-7 relative w-64 h-72 md:w-sm lg:w-lg md:h-80 lg:h-96 shadow-xl flex flex-col text-center">
+      <div className="bg-background rounded-xl px-5 py-7 relative w-64 h-80 md:w-sm lg:w-lg md:h-96 lg:h-96 shadow-xl flex flex-col text-center">
         <button
           onClick={onClose}
           className="absolute top-2 right-3 text-xl md:!text-3xl  !bg-transparent !text-primary size-3 md:size-5 lg:size-7"
@@ -34,33 +34,43 @@ const GiftModal = ({
           </p>
           <p className="text-sm md:text-lg leading-4 ">
             {buy
-              ? "Para continuar con la compra llená tus datos para verificar todo con nosotros! "
+              ? "Para continuar con la compra llená tus datos para verificar el envio y coordinar con nosotros! "
               : "Tu aporte puede ser del monto total o una parte según lo que dispongas..."}
           </p>
         </div>
 
         {buy ? (
-          <form className="">
-            <input
-              type="text"
-              required
-              placeholder="Tu nombre completo"
-              value={form.name}
-              onChange={e => setForm({ ...form, name: e.target.value })}
-              className=" bg-primary !text-background mt-2 px-3 py-2 rounded-full w-full mb-4"
-            />
-
+          <div>
             <a
-              href={whatsappURL}
+              href={buy}
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-8 py-2 md:text-xl bg-primary text-background rounded-full ${
-                form.name ? "" : "opacity-50 pointer-events-none"
-              }`}
+              className="text-sm underline md:text-lg"
             >
-              Enviar
+              Link del articulo
             </a>
-          </form>
+            <form className="">
+              <input
+                type="text"
+                required
+                placeholder="Tu nombre completo"
+                value={form.name}
+                onChange={e => setForm({ ...form, name: e.target.value })}
+                className=" bg-primary !text-background mt-2 px-3 py-2 rounded-full w-full mb-4"
+              />
+
+              <a
+                href={whatsappURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`px-8 py-2 md:text-xl bg-primary text-background rounded-full ${
+                  form.name ? "" : "opacity-50 pointer-events-none"
+                }`}
+              >
+                Enviar
+              </a>
+            </form>
+          </div>
         ) : (
           <div>
             <div className="flex items-center justify-center  gap-2  text-xs md:text-sm mb-2">
